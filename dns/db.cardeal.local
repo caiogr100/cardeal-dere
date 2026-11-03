@@ -1,0 +1,16 @@
+$TTL 86400
+@       IN SOA  ns.cardeal.local. admin.cardeal.local. (
+                2026110301 ; serial
+                3600       ; refresh
+                900        ; retry
+                604800     ; expire
+                86400 )    ; minimum
+@       IN NS   ns.cardeal.local.
+@       IN MX   10 mail.cardeal.local.
+
+gw      IN A    192.168.10.1
+ns      IN A    192.168.10.10
+files   IN A    192.168.10.10
+srv     IN A    192.168.10.20
+www     IN A    192.168.10.20
+mail    IN A    192.168.10.20
