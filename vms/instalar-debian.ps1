@@ -9,6 +9,8 @@ param(
 
 $vbox = "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"
 $preseed = Join-Path $PSScriptRoot "preseed.cfg"
+# Com "powershell -File", a lista chega como um texto só ("ns,srv").
+$Vms = $Vms -split ","
 
 foreach ($vm in $Vms) {
     $modelo = $preseed
