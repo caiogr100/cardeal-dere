@@ -40,7 +40,8 @@ Os usuários de teste são ana e bruno, com a senha definida pela variável
 
 Cada pasta de serviço guarda os arquivos de configuração e o script que os
 instala. Em `relatorio/` ficam a primeira entrega, com o estudo de
-viabilidade, e o relatório final.
+viabilidade, e o relatório final. O desenho da rede está em
+`topologia/topologia.png`.
 
 ## Autoria
 
