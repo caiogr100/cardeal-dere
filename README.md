@@ -23,8 +23,10 @@ saem para a internet passando por ele.
 1. Instalar o VirtualBox e baixar a ISO netinst do Debian 12.
 2. No Windows, rodar `vms\criar-vms.ps1 -Iso caminho\da\iso`. As VMs começam
    com a placa em NAT para conseguir baixar os pacotes.
-3. Instalar o Debian em cada VM, usando o nome dela como hostname e
-   `cardeal.local` como domínio. Só o cliente leva interface gráfica (XFCE).
+3. Rodar `vms\instalar-debian.ps1 -Iso caminho\da\iso`, que instala o Debian
+   sozinho em cada VM usando as respostas de `vms\preseed.cfg`. O hostname é
+   o nome da VM, o domínio é `cardeal.local` e o usuário é `caio`, com senha
+   `cardeal` (a mesma do root). Só o cliente leva interface gráfica (XFCE).
 4. Em cada VM, clonar este repositório e rodar como root, nesta ordem:
    - gw: `gateway/setup-gateway.sh` e depois `dhcp/setup-dhcp.sh`
    - ns: `dns/setup-dns.sh` e depois `samba/setup-samba.sh`

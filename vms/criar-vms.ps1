@@ -14,7 +14,7 @@ function Nova-VM($nome, $ramMB, $discoGB) {
     & $vbox storageattach $nome --storagectl SATA --port 1 --device 0 --type dvddrive --medium $Iso
 }
 
-Nova-VM gw 512 8
+Nova-VM gw 1024 8
 Nova-VM ns 1024 10
 Nova-VM srv 1024 10
 Nova-VM cliente 2048 20
