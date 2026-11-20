@@ -1,9 +1,10 @@
 #!/bin/sh
-# Roda como root na VM ns. A senha dos usuários vem de SENHA (padrão: cardeal).
+# Roda como root na VM ns, antes do setup-dns.sh. A senha dos usuários vem de SENHA (padrão: cardeal).
 set -e
 cd "$(dirname "$0")"
 SENHA="${SENHA:-cardeal}"
 
+apt-get update
 apt-get install -y samba smbclient
 
 groupadd -f funcionarios

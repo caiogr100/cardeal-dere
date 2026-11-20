@@ -29,7 +29,7 @@ saem para a internet passando por ele.
    `cardeal` (a mesma do root). Só o cliente leva interface gráfica (XFCE).
 4. Em cada VM, clonar este repositório e rodar como root, nesta ordem:
    - gw: `gateway/setup-gateway.sh` e depois `dhcp/setup-dhcp.sh`
-   - ns: `dns/setup-dns.sh` e depois `samba/setup-samba.sh`
+   - ns: `samba/setup-samba.sh` e depois `dns/setup-dns.sh`
    - srv: `web/setup-web.sh` e depois `email/setup-email.sh`
    - cliente: `cliente/setup-cliente.sh usuario`
 5. Desligar ns, srv e cliente e rodar `vms\ligar-na-lan.ps1`, que passa a

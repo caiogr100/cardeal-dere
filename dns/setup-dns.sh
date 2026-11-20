@@ -1,5 +1,5 @@
 #!/bin/sh
-# Roda como root na VM ns, ainda com a placa em NAT.
+# Roda como root na VM ns, ainda com a placa em NAT, depois do setup-samba.sh.
 # Depois, desligar a VM e passar a placa para a rede interna (vms/ligar-na-lan.ps1).
 set -e
 cd "$(dirname "$0")"
