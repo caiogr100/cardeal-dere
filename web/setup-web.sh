@@ -1,5 +1,5 @@
 #!/bin/sh
-# Roda como root na VM srv, ainda com a placa em NAT.
+# Roda como root na VM srv, ainda com a placa em NAT, depois do setup-email.sh.
 set -e
 cd "$(dirname "$0")"
 

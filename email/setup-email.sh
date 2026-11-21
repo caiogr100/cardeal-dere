@@ -1,9 +1,10 @@
 #!/bin/sh
-# Roda como root na VM srv. A senha dos usuários vem de SENHA (padrão: cardeal).
+# Roda como root na VM srv, antes do setup-web.sh. A senha dos usuários vem de SENHA (padrão: cardeal).
 set -e
 cd "$(dirname "$0")"
 SENHA="${SENHA:-cardeal}"
 
+apt-get update
 echo "postfix postfix/main_mailer_type select Internet Site" | debconf-set-selections
 echo "postfix postfix/mailname string cardeal.local" | debconf-set-selections
 DEBIAN_FRONTEND=noninteractive apt-get install -y postfix dovecot-imapd dovecot-pop3d

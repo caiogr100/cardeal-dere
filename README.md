@@ -30,7 +30,7 @@ saem para a internet passando por ele.
 4. Em cada VM, clonar este repositório e rodar como root, nesta ordem:
    - gw: `gateway/setup-gateway.sh` e depois `dhcp/setup-dhcp.sh`
    - ns: `samba/setup-samba.sh` e depois `dns/setup-dns.sh`
-   - srv: `web/setup-web.sh` e depois `email/setup-email.sh`
+   - srv: `email/setup-email.sh` e depois `web/setup-web.sh`
    - cliente: `cliente/setup-cliente.sh usuario`
 5. Desligar ns, srv e cliente e rodar `vms\ligar-na-lan.ps1`, que passa a
    placa delas para a rede interna `cardeal-lan`.
@@ -42,8 +42,10 @@ Os usuários de teste são ana e bruno, com a senha definida pela variável
 
 Cada pasta de serviço guarda os arquivos de configuração e o script que os
 instala. Em `relatorio/` ficam a primeira entrega, com o estudo de
-viabilidade, e o relatório final. O desenho da rede está em
-`topologia/topologia.png`.
+viabilidade, e o relatório final (`relatorio.pdf`, com o texto-fonte em
+`relatorio.md`). As capturas do Wireshark feitas no cliente estão em
+`wireshark/`: `dhcp.pcapng`, `dns.pcapng`, `http.pcapng` e `email.pcapng`. O
+desenho da rede está em `topologia/topologia.png`.
 
 ## Autoria
 
